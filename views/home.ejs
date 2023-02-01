@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p> <%= homeContent %> </p>
+<br>
+
+<% updates.forEach(function(update){ %>
+    <h2> <%= update.title %> </h2>
+    <h3>Click <a href="/posts/<%=update.title%>" target="blank">Here</a> to read the full article.
+    <!-- <h3> <%= new Date(); %> </h3>
+    <p> <%= update.content %> </p> -->
+<% }); %>
+
+<%- include("partials/footer"); -%>
